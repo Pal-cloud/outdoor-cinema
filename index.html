@@ -1,13 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cine de Verano</title>
+  <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
-    <button onclick="printMovies()">Cartelera</button>
-    <section></section>
-    <script src ="src\service.js"></script>
+
+  <header>
+    <img src="https://media.tenor.com/HKpAobwCaGIAAAAM/countdown-movie-countdown.gif" alt="Cuenta atrás Cinemascope" class="countdown-gif">
+    <h1>Cine de Verano</h1>
+    <p>Cartelera científica: tiburones, ciencia y emoción</p>
+    <button onclick="printMovies()">Ver Cartelera</button>
+  </header>
+
+  <main>
+    <!-- SECCIÓN DE CARTELERA -->
+    <section id="movies-container">
+      <!-- Las películas se imprimirán aquí vía JavaScript -->
+    </section>
+
+    <!-- FORMULARIO DE SUGERENCIAS -->
+    <section id="suggestion-section">
+      <h2>¿Qué película te gustaría ver en el próximo ciclo?</h2>
+      <form id="suggestion-form">
+        <input type="text" name="title" placeholder="Título de la película" required>
+        <textarea name="reason" placeholder="¿Por qué la recomiendas?"></textarea>
+        <input type="text" name="user" placeholder="Tu nombre o apodo (opcional)">
+        <button type="submit">Enviar sugerencia</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cine de Verano</p>
+  </footer>
+
+  <script src="src/service.js"></script>
 </body>
 </html>

@@ -28,15 +28,26 @@ async function deleteMovie(id){
 }
 
 // IMPRIMIR
-let moviesContainer = document.querySelector('section');
+let moviesContainer = document.querySelector('#movies-container');
 
 async function printMovies() {
+  moviesContainer.innerHTML = ""; // Limpiar contenedor
   const movies = await getMovies();
-  const movieList = movies.map(movie => {
-    return moviesContainer.innerHTML += 
-    `<h1>${movie.title}</h1>
-    <p>${movie.scienceField}</p>`;
-  });
 
-  return movieList;
+  movies.forEach(movie => {
+    const card = document.createElement("div");
+    card.classList.add("movie-card");
+
+    card.innerHTML = `
+      <h3>${movie.title}</h3>
+      <p><strong>Año:</strong> ${movie.year}</p>
+      <p><strong>Género:</strong> ${movie.gender}</p>
+      <p><strong>Ciencia:</strong> ${movie.scienceField}</p>
+      <p><strong>Director:</strong> ${movie.director}</p>
+      <p><strong>Actores:</strong> ${movie.actors}</p>
+      <p><strong>Descripción:</strong> ${movie.movie_description}</p>
+      ${movie.video_url ? `<iframe src="${movie.video_url}" frameborder="0" allowfullscreen></iframe>` : ""}
+   `;
+    moviesContainer.appendChild(card);
+  });
 }
