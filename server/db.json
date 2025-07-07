@@ -1,28 +1,37 @@
-{
-   "movies": [
+"movies": [
     {
       "id": "1",
       "title": "Tengo miedo torero",
-      "year": "",
-      "gender": "",
-      "scienceField": "Física y Astronomía",
-      "director": "Oscar S. Aranda",
-      "actors": "",
-      "movie_description": "Este libro es un viaje que nos llevará por maravillosos lugares alrededor del mundo para conocer de cerca a seres que, al igual que nosotros, tienen familia, emociones, enfrentan desafíos, toman decisiones y crean alianzas.",
-      "video_url": "https://www.youtube.com/watch?v=U1fu_sA7XhE",
-       "comments": []                  
+      "year": "2020",
+      "gender": "Drama, Romance, LGBTQ+",
+      "scienceField": "",
+      "director": "Rodrigo Sepúlveda",
+      "actors": "Alfredo Castro, Leonardo Ortizgris",
+      "movie_description": "Durante la dictadura de Pinochet, un homosexual solitario se enamora de un joven revolucionario que lo involucra en una operación política. Adaptación de la novela homónima de Pedro Lemebel.",
+      "video_url": "https://www.youtube.com/watch?v=dJ6BNjqCS8g",
+      "comments": []                  
     },
     {
       "id": "2",
-      "title": "Tengo miedo torero",
-      "year": "",
-      "gender": "",
-      "scienceField": "Física y Astronomía",
-      "director": "Oscar S. Aranda",
-      "actors": "",
-      "movie_description": "Este libro es un viaje que nos llevará por maravillosos lugares alrededor del mundo para conocer de cerca a seres que, al igual que nosotros, tienen familia, emociones, enfrentan desafíos, toman decisiones y crean alianzas.",
-      "video_url": "https://www.youtube.com/watch?v=U1fu_sA7XhE", 
-      "comments": []   
-    }
-   ]
-} 
+      "title": "La casa de los espíritus",
+      "year": "1993",
+      "gender": "Drama, Histórico, Realismo mágico",
+      "scienceField": "",
+      "director": "Bille August",
+      "actors": "Meryl Streep, Jeremy Irons, Glenn Close, Winona Ryder, Antonio Banderas",
+      "movie_description": "Basada en la novela de Isabel Allende, sigue la historia de una familia chilena a lo largo de varias generaciones marcada por secretos, política y dones sobrenaturales.",
+      "video_url": "https://www.youtube.com/watch?v=2rY8vTxH_x0" ,
+      "comments": []  
+    },
+    {
+    "id": "3",
+    "title": "Arráncame la vida",
+    "year": "2008",
+    "gender": "Drama, Romance, Histórico",
+    "scienceField": "",
+    "director": "Roberto Sneider",
+    "actors": "Ana Claudia Talancón, Daniel Giménez Cacho, José María de Tavira",
+    "movie_description": "Basada en la novela de Ángeles Mastretta, narra la historia de Catalina, una joven que se casa con un político poderoso en el México posrevolucionario y que lucha por su libertad e identidad.",
+    "video_url": "https://www.youtube.com/watch?v=2OxPq_7KqsQ"
+  },
+  ]
