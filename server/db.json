@@ -2,13 +2,14 @@
    "movies": [
     {
       "id": "1",
-      "title": "El lenguaje secreto de la naturaleza",
+      "title": "Tengo miedo torero",
       "year": "",
       "gender": "",
       "scienceField": "Física y Astronomía",
       "director": "Oscar S. Aranda",
       "actors": "",
       "movie_description": "Este libro es un viaje que nos llevará por maravillosos lugares alrededor del mundo para conocer de cerca a seres que, al igual que nosotros, tienen familia, emociones, enfrentan desafíos, toman decisiones y crean alianzas.",
+      "video_url": "https://www.youtube.com/watch?v=U1fu_sA7XhE",
        "comments": []                  
     },
     {
@@ -20,7 +21,8 @@
       "director": "Oscar S. Aranda",
       "actors": "",
       "movie_description": "Este libro es un viaje que nos llevará por maravillosos lugares alrededor del mundo para conocer de cerca a seres que, al igual que nosotros, tienen familia, emociones, enfrentan desafíos, toman decisiones y crean alianzas.",
-       "comments": []   
+      "video_url": "https://www.youtube.com/watch?v=U1fu_sA7XhE", 
+      "comments": []   
     }
    ]
 } 

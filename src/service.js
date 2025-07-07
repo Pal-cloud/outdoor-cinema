@@ -16,8 +16,15 @@ async function updateMovie(id, editedMovie) {
 }
 
 // DELETE
-async function deleteMovie(id) {
-  // pendiente de implementar
+async function deleteMovie(id){
+    const response = await fetch(`http://localhost:3000/movies/${id}`, {
+        method: "DELETE", // Método para eliminar un recurso
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    console.log(`Película con id ${id} eliminada`);
+    return response.ok; // Devuelve true si fue exitoso
 }
 
 // IMPRIMIR
@@ -28,7 +35,7 @@ async function printMovies() {
   const movieList = movies.map(movie => {
     return moviesContainer.innerHTML += 
     `<h1>${movie.title}</h1>
-    <p>${movie.scienceFieldEs}</p>`;
+    <p>${movie.scienceField}</p>`;
   });
 
   return movieList;
