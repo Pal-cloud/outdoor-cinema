@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #0d0d0d;
+  color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+.countdown-gif {
+  width: 180px;
+  margin: 0 auto 15px;
+  display: block;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e6b800;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* CARTELERA */
+#movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.movie-card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+}
+
+.movie-card h3 {
+  color: #ffcc00;
+  margin-bottom: 8px;
+}
+
+.movie-card iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* SUGERENCIAS */
+#suggestion-section {
+  background-color: #1a1a1a;
+  padding: 20px;
+  margin: 50px auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+#suggestion-section h2 {
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+#suggestion-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#suggestion-form input, #suggestion-form textarea, #suggestion-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#suggestion-form input, #suggestion-form textarea {
+  background-color: #333;
+  color: #fff;
+}
+
+#suggestion-form button {
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#suggestion-form button:hover {
+  background-color: #e6b800;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
