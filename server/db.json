@@ -1,4 +1,5 @@
-"movies": [
+{
+  "movies": [
     {
       "id": "1",
       "title": "Tengo miedo torero",
@@ -16,7 +17,7 @@
       "title": "La casa de los espíritus",
       "year": "1993",
       "gender": "Drama, Histórico, Realismo mágico",
-      "scienceField": "",
+      "scienceField": "Realismo mágico",
       "director": "Bille August",
       "actors": "Meryl Streep, Jeremy Irons, Glenn Close, Winona Ryder, Antonio Banderas",
       "movie_description": "Basada en la novela de Isabel Allende, sigue la historia de una familia chilena a lo largo de varias generaciones marcada por secretos, política y dones sobrenaturales.",
@@ -32,6 +33,32 @@
     "director": "Roberto Sneider",
     "actors": "Ana Claudia Talancón, Daniel Giménez Cacho, José María de Tavira",
     "movie_description": "Basada en la novela de Ángeles Mastretta, narra la historia de Catalina, una joven que se casa con un político poderoso en el México posrevolucionario y que lucha por su libertad e identidad.",
-    "video_url": "https://www.youtube.com/watch?v=2OxPq_7KqsQ"
+    "video_url": "https://www.youtube.com/watch?v=2OxPq_7KqsQ",
+    "comments": []
   },
-  ]
+  {
+    "id": "4",
+    "title": "La teta asustada",
+    "year": "2009",
+    "gender": "Drama, Social, Feminismo",
+    "scienceField": "Biografía",
+    "director": "Claudia Llosa",
+    "actors": "Magaly Solier, Susi Sánchez",
+    "movie_description": "Fausta sufre una enfermedad transmitida por el miedo durante la violencia en Perú. La película explora el trauma heredado y el cuerpo femenino como territorio de memoria. Inspirada en relatos de Viviana Meza.",
+    "video_url": "https://www.youtube.com/watch?v=ktxYqAmIIfI",
+    "comments": []
+  },
+  {
+    "id": "5",
+    "title": "Utama",
+    "year": "2022",
+    "gender": "Drama, Ecológico, Indígena",
+    "scienceField": "",
+    "director": "Alejandro Loayza Grisi",
+    "actors": "José Calcina, Luisa Quispe, Candelaria Quispe",
+    "movie_description": "En el altiplano boliviano, una pareja quechua de ancianos enfrenta la sequía y el cambio climático mientras lucha por conservar su forma de vida. Una película profundamente humanista que retrata la tensión entre tradición y modernidad.",
+    "video_url": "https://www.youtube.com/watch?v=OqLO3gqzUNk",
+    "comments": []
+}
+]
+}
