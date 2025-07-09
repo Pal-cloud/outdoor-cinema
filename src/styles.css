@@ -53,6 +53,32 @@ main {
   margin: 0 auto;
 }
 
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.movies-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.comment-list {
+  list-style: none;
+  margin-top: 10px;
+  padding-left: 0;
+}
+
+.likes span {
+  cursor: pointer;
+  font-size: 1.4rem;
+  margin-right: 10px;
+}
+
 /* CARTELERA */
 #movies-container {
   display: grid;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cine de Verano</title>
   <link rel="stylesheet" href="src/styles.css">
@@ -11,17 +11,23 @@
   <header>
     <img src="https://media.tenor.com/HKpAobwCaGIAAAAM/countdown-movie-countdown.gif" alt="Cuenta atrás Cinemascope" class="countdown-gif">
     <h1>Cine de Verano</h1>
-    <p>Cartelera científica: tiburones, ciencia y emoción</p>
-    <button onclick="printMovies()">Ver Cartelera</button>
+    <p>Cartelera científica: Ciencia y emoción en nuestros ciclos temáticos</p>
+    <div class="button-group">
+      <button id="btn-sharks">🦈 Ver Ciclo Tiburones</button>
+      <button id="btn-literature">📚 Ver Ciclo Literatura</button>
+    </div>
   </header>
 
   <main>
-    <!-- SECCIÓN DE CARTELERA -->
-    <section id="movies-container">
-      <!-- Las películas se imprimirán aquí vía JavaScript -->
+    <section id="intro-section">
+      <h2>🎬 Verano de Ciencia: Un ciclo en dos actos</h2>
+      <p><strong>Dos semanas, dos ciclos temáticos:</strong> tiburones y literatura científica.</p>
     </section>
 
-    <!-- FORMULARIO DE SUGERENCIAS -->
+    <section id="cycle-movies" class="movies-group">
+      <!-- Aquí se inyectan las tarjetas de películas -->
+    </section>
+
     <section id="suggestion-section">
       <h2>¿Qué película te gustaría ver en el próximo ciclo?</h2>
       <form id="suggestion-form">
@@ -29,6 +35,7 @@
         <textarea name="reason" placeholder="¿Por qué la recomiendas?"></textarea>
         <input type="text" name="user" placeholder="Tu nombre o apodo (opcional)">
         <button type="submit">Enviar sugerencia</button>
+        <button id="btn-suggestions">💡 Ver Sugerencias</button>
       </form>
     </section>
   </main>
