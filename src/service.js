@@ -7,7 +7,17 @@ async function getMovies() {
   return await res.json();
 }
 
-async function updateMovie(id, data) {
+async function updateMoviePut(id, data) {
+  const res = await fetch(`${API_URL}/${id}`, {
+    method: "PUT",
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  });
+  console.log("Respuesta del servidor:", res);
+  return res.ok;
+}
+
+async function updateMoviePatch(id, data) {
   const res = await fetch(`${API_URL}/${id}`, {
     method: "PATCH",
     headers: { 'Content-Type': 'application/json' },
@@ -64,19 +74,19 @@ function createMovieCard(movie) {
 
   card.querySelector(".like-btn").addEventListener("click", async () => {
     movie.likes = (movie.likes || 0) + 1;
-    await updateMovie(movie.id, { likes: movie.likes });
+    await updateMoviePatch(movie.id, { likes: movie.likes });
     likeCount.textContent = movie.likes;
   });
 
   card.querySelector(".dislike-btn").addEventListener("click", async () => {
     movie.dislikes = (movie.dislikes || 0) + 1;
-    await updateMovie(movie.id, { dislikes: movie.dislikes });
+    await updateMoviePatch(movie.id, { dislikes: movie.dislikes });
     dislikeCount.textContent = movie.dislikes;
   });
 
   card.querySelector(".love-btn").addEventListener("click", async () => {
     movie.hearts = (movie.hearts || 0) + 1;
-    await updateMovie(movie.id, { hearts: movie.hearts });
+    await updateMoviePatch(movie.id, { hearts: movie.hearts });
     loveCount.textContent = movie.hearts;
   });
 
@@ -101,7 +111,7 @@ function createMovieCard(movie) {
 
     movie.comments = movie.comments || [];
     movie.comments.push(text);
-    await updateMovie(movie.id, { comments: movie.comments });
+    await updateMoviePatch(movie.id, { comments: movie.comments });
     renderComments();
     input.value = "";
   });
