@@ -35,6 +35,13 @@ async function createMovie(movie) {
   return await res.json();
 }
 
+async function deleteMovie(id) {
+  const res = await fetch(`${API_URL}/${id}`, {
+    method: "DELETE"
+  });
+  return res.ok;
+}
+
 function containsBadWords(comment) {
   return BAD_WORDS.some(word => comment.toLowerCase().includes(word));
 }
@@ -65,6 +72,10 @@ function createMovieCard(movie) {
     <input type="text" placeholder="Agrega un comentario..." class="comment-input">
     <button class="comment-btn">Comentar</button>
     <ul class="comment-list"></ul>
+    <div class="admin-buttons">
+      <button class="edit-btn">✏️ Editar</button>
+      <button class="delete-btn">🗑️ Eliminar</button>
+    </div>
   `;
 
   // 🧡 Likes
@@ -117,6 +128,24 @@ function createMovieCard(movie) {
   });
 
   renderComments();
+
+  // 🗑️ Eliminar película
+  card.querySelector(".delete-btn").addEventListener("click", async () => {
+    if (confirm(`¿Estás seguro de eliminar "${movie.title}"?`)) {
+      const success = await deleteMovie(movie.id);
+      if (success) {
+        alert("Película eliminada exitosamente");
+        renderMoviesByCycle(movie.cycle);
+      } else {
+        alert("Error al eliminar la película");
+      }
+    }
+  });
+
+  // ✏️ Editar película
+  card.querySelector(".edit-btn").addEventListener("click", () => {
+    openEditMovieModal(movie);
+  });
 
   return card;
 }
@@ -171,11 +200,108 @@ async function handleSuggestionSubmit(e) {
   renderMoviesByCycle("suggestion");
 }
 
+// 🎬 Administración de películas
+async function handleAdminSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  
+  const movie = {
+    title: form.title.value.trim(),
+    year: form.year.value.trim(),
+    gender: form.gender.value.trim(),
+    scienceField: form.scienceField.value.trim(),
+    director: form.director.value.trim(),
+    actors: form.actors.value.trim(),
+    movie_description: form.movie_description.value.trim(),
+    video_url: form.video_url.value.trim(),
+    cycle: form.cycle.value,
+    comments: [],
+    likes: 0,
+    dislikes: 0,
+    hearts: 0
+  };
+
+  if (!movie.title) {
+    alert("El título es obligatorio");
+    return;
+  }
+
+  const success = await createMovie(movie);
+  if (success) {
+    alert("Película agregada exitosamente");
+    form.reset();
+    renderMoviesByCycle(movie.cycle);
+  } else {
+    alert("Error al agregar la película");
+  }
+}
+
+// ✏️ Modal de edición
+function openEditMovieModal(movie) {
+  const modal = document.getElementById("edit-modal");
+  const form = document.getElementById("edit-form");
+  
+  // Llenar el formulario con los datos actuales
+  form.title.value = movie.title;
+  form.year.value = movie.year;
+  form.gender.value = movie.gender;
+  form.scienceField.value = movie.scienceField;
+  form.director.value = movie.director;
+  form.actors.value = movie.actors;
+  form.movie_description.value = movie.movie_description;
+  form.video_url.value = movie.video_url;
+  form.cycle.value = movie.cycle;
+  
+  // Guardar el ID para la actualización
+  form.dataset.movieId = movie.id;
+  
+  modal.style.display = "block";
+}
+
+function closeEditModal() {
+  document.getElementById("edit-modal").style.display = "none";
+}
+
+async function handleEditSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const movieId = form.dataset.movieId;
+  
+  const updateData = {
+    title: form.title.value.trim(),
+    year: form.year.value.trim(),
+    gender: form.gender.value.trim(),
+    scienceField: form.scienceField.value.trim(),
+    director: form.director.value.trim(),
+    actors: form.actors.value.trim(),
+    movie_description: form.movie_description.value.trim(),
+    video_url: form.video_url.value.trim(),
+    cycle: form.cycle.value
+  };
+
+  if (!updateData.title) {
+    alert("El título es obligatorio");
+    return;
+  }
+
+  // Usar PUT para actualización completa
+  const success = await updateMoviePut(movieId, updateData);
+  if (success) {
+    alert("Película actualizada exitosamente");
+    closeEditModal();
+    renderMoviesByCycle(updateData.cycle);
+  } else {
+    alert("Error al actualizar la película");
+  }
+}
+
 // 🧠 Eventos
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#btn-sharks").addEventListener("click", () => renderMoviesByCycle("sharks"));
   document.querySelector("#btn-literature").addEventListener("click", () => renderMoviesByCycle("literature"));
   document.querySelector("#suggestion-form").addEventListener("submit", handleSuggestionSubmit);
+  document.querySelector("#admin-form")?.addEventListener("submit", handleAdminSubmit);
+  document.querySelector("#edit-form")?.addEventListener("submit", handleEditSubmit);
 
   // Mostrar sugerencias al cargar
   renderMoviesByCycle("sharks");
