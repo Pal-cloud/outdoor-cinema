@@ -11,8 +11,8 @@
       "movie_description": "Un tiburón blanco amenaza a un pueblo costero, mientras un biólogo marino, un oficial y un cazador intentan detenerlo.",
       "video_url": "https://www.youtube.com/embed/U1fu_sA7XhE",
       "comments": [],
-      "likes": 2,
-      "dislikes": 1,
+      "likes": 6,
+      "dislikes": 3,
       "hearts": 1,
       "cycle": "sharks"
     },
@@ -59,8 +59,8 @@
       "movie_description": "Una surfista queda atrapada en una roca a pocos metros de la orilla mientras un gran tiburón blanco merodea a su alrededor. La película explora instintos de supervivencia y el comportamiento depredador de los tiburones.",
       "video_url": "https://www.youtube.com/embed/EgdxIlSuB70",
       "comments": [],
-      "likes": 1,
-      "dislikes": 1,
+      "likes": 2,
+      "dislikes": 3,
       "hearts": 1,
       "cycle": "sharks"
     },
@@ -75,13 +75,12 @@
       "movie_description": "Dos hermanas quedan atrapadas en una jaula de tiburones a 47 metros de profundidad con oxígeno limitado, mientras el miedo y la presión amenazan su cordura.",
       "video_url": "https://www.youtube.com/embed/sXBQ1VV5FNQ",
       "comments": [],
-      "likes": 2,
-      "dislikes": 2,
+      "likes": 4,
+      "dislikes": 3,
       "hearts": 2,
       "cycle": "sharks"
     },
     {
-      "id": "6",
       "title": "Tengo miedo torero",
       "year": "2020",
       "gender": "Drama, Romance, LGBTQ+",
@@ -90,11 +89,8 @@
       "actors": "Alfredo Castro, Leonardo Ortizgris",
       "movie_description": "Durante la dictadura de Pinochet, un homosexual solitario se enamora de un joven revolucionario que lo involucra en una operación política. Adaptación de la novela homónima de Pedro Lemebel.",
       "video_url": "https://www.youtube.com/embed/In4hnm9X9LE",
-      "comments": [],
-      "likes": 0,
-      "dislikes": 0,
-      "hearts": 0,
-      "cycle": "literature"
+      "cycle": "literature",
+      "id": "6"
     },
     {
       "id": "7",
@@ -159,50 +155,6 @@
       "dislikes": 0,
       "hearts": 0,
       "cycle": "literature"
-    },
-    {
-      "title": "Color Púrpura",
-      "year": "",
-      "gender": "Sugerencia",
-      "scienceField": "",
-      "director": "",
-      "actors": "",
-      "movie_description": "",
-      "video_url": "",
-      "comments": [],
-      "likes": 0,
-      "dislikes": 0,
-      "hearts": 0,
-      "cycle": "suggestion",
-      "id": "Z_RUxQ9"
-    },
-    {
-      "title": "Color Púrpura",
-      "year": "",
-      "gender": "Sugerencia",
-      "scienceField": "",
-      "director": "",
-      "actors": "",
-      "movie_description": "La temática\n",
-      "video_url": "",
-      "comments": [],
-      "likes": 0,
-      "dislikes": 0,
-      "hearts": 0,
-      "cycle": "suggestion",
-      "id": "YE8diri"
-    },
-    {
-      "title": "color purpura",
-      "year": "2021",
-      "gender": "humor",
-      "scienceField": "ninguno",
-      "director": "nose",
-      "actors": "nose",
-      "movie_description": "buena",
-      "video_url": "https://www.youtube.com/watch?v=FD_YvBDa-o8",
-      "cycle": "sharks",
-      "id": "4fWOT0o"
     }
   ]
 }
