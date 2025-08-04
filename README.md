@@ -118,6 +118,7 @@ git push origin mejora-nueva
 
 5. Abre un Pull Request
 
+
 🧠 Autoría y créditos
 
 Proyecto desarrollado como práctica de desarrollo frontend para simular una API y aprender a consumirla desde el navegador junto a [Aday25](https://github.com/Aday25)
