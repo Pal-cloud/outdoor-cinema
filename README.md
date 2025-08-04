@@ -91,15 +91,7 @@ DELETE → Eliminar una película
 
 ¿Quieres colaborar con el proyecto?
 
-Puedes:
-
-- Sugerir nuevas películas o ciclos temáticos
-
-- Mejorar el diseño visual con CSS
-
-- Refactorizar el código JavaScript
-
-- Agregar más funcionalidades o modularidad
+Puedes: Sugerir nuevas películas o ciclos temáticos, mejorar el diseño visual con CSS, refactorizar el código JavaScript, agregar más funcionalidades o modularidad. ¿Cómo?
 
 1. Haz un fork del repositorio
 
